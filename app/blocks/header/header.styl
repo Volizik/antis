@@ -1,0 +1,63 @@
+.header
+  position relative
+  z-index 1
+  display block
+  height 536px
+  background url(../images/header.png) no-repeat center center
+  background-size cover
+  &__navbar
+    display flex
+    align-items center
+    height 85px
+  &__logo
+    margin-right 38px
+    margin-left 12px
+  &__contacts
+    margin-right 60px
+    margin-left auto
+    display flex
+    justify-content center
+    align-items center
+  &__contact
+    font-family GSemi
+    font-size 16px
+    color #fff
+    &:not(:last-of-type)
+      margin-right 18px
+    img
+      margin-right 6px
+  &__wrap
+    margin 47px auto
+    max-width 760px
+  &__title
+    font-family Bebas
+    font-size 39px
+    color #fff
+  &__desc
+    margin 22px auto 0
+    max-width 740px
+    font-family GMedium
+    font-size 15px
+    line-height 21px
+    text-align center
+    color #fff
+  &__form
+    margin-top 65px
+    display flex
+    justify-content space-between
+  &__input
+    padding-left 25px
+    width 270px
+    height 40px
+    font-family GMedium
+    font-size 16px
+    color #fff
+    background-color transparent
+    border 1px solid #fff
+    border-radius 4px
+    &::placeholder
+      font-family GRegI
+      font-size 13px
+      color #fff
+  &__submit
+    button(200px)

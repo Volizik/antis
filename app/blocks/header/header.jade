@@ -1,0 +1,25 @@
+include ../container/container
+include ../nav/nav
+
+mixin header()
+	+b('header').header
+		+container()
+			+e.navbar
+				+e.logo
+					img(src='./assets/images/logo.png')
+				+nav()
+				+e.contacts
+					+e.contact
+						+e('img').contact-img(src='./assets/images/icon-phone.png')
+						+e('span').contact-text 8 800 555 35 35
+					+e.contact
+						+e('img').contact-img(src='./assets/images/icon-phone.png')
+						+e('span').contact-text 8 800 555 35 35
+			+e.wrap
+				+e('h1').title Металлообрабатывающее производство полного цикла
+				+e('p').desc Оснащение производственного цеха по последнему слову техники позволяет предоставлять высококачественные услуги по разработке и изготовлению металлоконструкций и подобной продукции в любых объемах вне зависимости от сложности.
+				form
+					+e.form
+						+e('input').input(type='text' placeholder='Ваше имя')
+						+e('input').input(type='text' placeholder='Ваш телефон')
+						+e('button').submit(type='submit') Заказать звонок

@@ -1,6 +1,12 @@
-extends /blocks/layout-default/layout-default
+extends ../blocks/layout-default/layout-default
+include ../blocks/header/header
+include ../blocks/services/services
+include ../blocks/about/about
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Project Template';
 
 block content
+	+header()
+	+services()
+	+about()
