@@ -1,0 +1,29 @@
+include ../container/container
+
+mixin contacts()
+	+b('section').contacts
+		+container()
+			+e.wrap
+				form
+					+e.form
+						+e.form-title Закажите звонок
+						+e.form-subtitle и наши менеджеры непременно с Вами свяжуться
+						+e.form-wrap
+							+e('input').input(type='text' placeholder='Ваше имя')
+							+e('input').input(type='text' placeholder='Ваш телефон')
+							+e.select
+								+e('select')
+									option(selected='selected' hidden) service1
+									option service2
+									option service3
+									option service4
+							+e('button').button Заказать звонок
+				+e.text
+					+e('h2').title Как оформить заказ?
+					+e('p').desc Вы можете позвонить в наш центр металлообработки по телефонам:
+					+e.desc
+						strong 8-800-5000-429
+						span (звонок бесплатный),
+						p
+							strong (831) 215-16-52, 216-32-88.
+					+e('p').desc Также воспользуйтесь функцией «Заказать звонок», что наши менеджеры связались с вами и обсудили условия сотрудничества.

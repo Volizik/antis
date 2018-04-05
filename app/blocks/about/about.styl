@@ -1,2 +1,95 @@
 .about
+	position relative
+	margin-top 90px
 	display block
+	&__wrap
+		display flex
+	&__text
+		margin-left 63px
+		flex-basis 500px
+		font-size 16px
+		line-height 21px
+	&__paragraph
+		margin-bottom 20px
+	p&__paragraph
+		font-family GMedium
+	strong&__paragraph
+		font-family Gbold
+	&__slider
+		position relative
+		margin-top 16px
+		margin-right -10px
+		margin-left auto
+		width 570px
+		flex-shrink 0
+	&__slide
+		height 300px
+	&__slider-wrap
+		margin-top 18px
+		overflow hidden
+		width 485px
+	&__slider-bg
+		position absolute
+		top 0
+		right 0
+		width 485px
+		height 330px
+		background-color yellow
+	.slick-arrow
+		position absolute
+		top 50%
+		right 45px
+		width 27px
+		height 20px
+		color transparent
+		background-color transparent
+		border none
+		&:before
+			display block
+			width 27px
+			height 20px
+			content ''
+	.slick-prev
+		transform translateY(-220%)
+		&:before
+			background url(../images/arrow-left.png) center center no-repeat
+	.slick-next
+		transform translateY(-95%)
+		&:before
+			background url(../images/arrow-right.png) center center no-repeat
+	&__side-text
+		position absolute
+		right -166px
+		bottom 182px
+		transform rotate(-90deg) translateX(-100%)
+		display flex
+		align-items center
+		font-family GMedium
+		font-size 12px
+		color yellow
+		&:after
+			position relative
+			z-index 0
+			margin-left 15px
+			display block
+			width 200px
+			height 1px
+			content ''
+			background-color yellow
+		strong
+			padding 0 3px
+			font-family Gbold
+	&__dots1
+		position absolute
+		z-index -1
+		top -100px
+		left 55%
+		size(250px)
+		object-fit contain
+	&__dots2
+		position absolute
+		z-index -1
+		left -125px
+		bottom -200px
+		size(300px)
+		object-fit contain

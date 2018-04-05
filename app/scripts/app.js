@@ -1,6 +1,8 @@
-import svg4everybody from 'svg4everybody';
-import $ from 'jquery';
-
-$(() => {
-	svg4everybody();
-});
+/* eslint-disable indent */
+(function ($) {
+	$(() => {
+        $('.about__slider-wrap').slick({
+            slidesToShow: 1
+        });
+    });
+})(jQuery);

@@ -5,7 +5,9 @@ include ../scripts/scripts
 
 doctype html
 html(lang='ru')
-	include ../head/head
-	+page
-		block content
-		+scripts(['app.min.js'])
+    include ../head/head
+    +page
+        block content
+        script(src='./vendor/jquery-3.3.1.min.js')
+        script(src='./vendor/slick/slick.min.js')
+        +scripts(['app.min.js'])

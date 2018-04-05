@@ -1,2 +1,51 @@
 .footer
+	position relative
+	z-index 2
+	padding 45px 0
 	display block
+	font-family GReg
+	color #e9e9e9
+	background-color #141414
+	&__wrap
+		display flex
+		align-items flex-start
+	&__logo
+		width 70px
+		object-fit contain
+	&__menu
+		margin-left 24px
+		display flex
+		flex-direction column
+	&__menu-item
+		margin-bottom 8px
+		font-size 15px
+		text-transform uppercase
+		text-decoration none
+		color #f8f8f8
+	&__services
+		margin-left 80px
+		display flex
+		flex-wrap wrap
+		max-width 600px
+	&__services-item
+		margin-bottom 5px
+		width 50%
+		font-size 13px
+		text-decoration none
+		color #f8f8f8
+	&__contacts
+		display flex
+		flex-direction column
+		font-size 13px
+	&__contacts-item
+		margin-bottom 15px
+		display flex
+		align-items flex-start
+		img
+			margin-right 10px
+			size(15px)
+			object-fit contain
+		span
+			display block
+		p
+			line-height 18px

@@ -208,7 +208,8 @@
 		"animation-iteration-count",
 		"animation-direction",
 		"backface-visibility",
-		"will-change"
+		"will-change",
+		"appearance"
 	],
 	"stackedProperties": "never",
 	// "trailingWhitespace": "never", // bug: throw error when there are spaces after rule before comment

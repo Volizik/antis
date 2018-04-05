@@ -1,7 +1,7 @@
 include ../container/container
 
 mixin about()
-	+b.about
+	+b('section').about
 		+container()
 			+e.wrap
 				+e.text
@@ -13,8 +13,14 @@ mixin about()
 					+e('strong').paragraph Мы гарантируем высокое качество предоставляемых услуг и изготавливаемых изделий и невысокую цену на услуги по металлообработки.
 				+e.slider
 					+e.slider-bg
+						+e.side-text
+							span Только
+							strong качественные
+							span услуги
 					+e.slider-wrap
 						+e('img').slide(src='./assets/images/slide.png')
 						+e('img').slide(src='./assets/images/slide.png')
 						+e('img').slide(src='./assets/images/slide.png')
 						+e('img').slide(src='./assets/images/slide.png')
+			+e('img').dots1(src='./assets/images/dots.png')
+			+e('img').dots2(src='./assets/images/dots.png')
