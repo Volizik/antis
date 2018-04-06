@@ -4,7 +4,7 @@ mixin footer()
 	+b('footer').footer
 		+container()
 			+e.wrap
-				+e('img').logo(src='../assets/images/logo.png')
+				+e('img').logo(src='./assets/images/logo.png')
 				+e.menu
 					+e('a').menu-item(href='#') производство
 					+e('a').menu-item(href='#') продукция
@@ -22,13 +22,13 @@ mixin footer()
 					+e('a').services-item(href='#') Сварочные работы
 				+e.contacts
 					+e.contacts-item
-						img(src='../assets/images/icon-email.png')
+						img(src='./assets/images/icon-email.png')
 						p project@crears.ru
 					+e.contacts-item
-						img(src='../assets/images/icon-place.png')
+						img(src='./assets/images/icon-place.png')
 						p
 							span 107061, г. Москва,
 							span ул. Артема д. 20 оф.17
 					+e.contacts-item
-						img(src='../assets/images/icon-phone.png')
+						img(src='./assets/images/icon-phone.png')
 						p 8 800 555 35 35

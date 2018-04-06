@@ -4,11 +4,20 @@
 	display block
 	&__wrap
 		display flex
+		+below(1200px)
+			flex-direction column
 	&__text
 		margin-left 63px
 		flex-basis 500px
 		font-size 16px
 		line-height 21px
+		+below(1200px)
+			flex-basis auto
+			width 85%
+			order 2
+		+below(570px)
+			margin-left 0
+			width 100%
 	&__paragraph
 		margin-bottom 20px
 	p&__paragraph
@@ -22,19 +31,37 @@
 		margin-left auto
 		width 570px
 		flex-shrink 0
+		+below(1200px)
+			margin-top 0
+			margin-right 0
+			margin-bottom 50px
+			width 100%
+			height 400px
+			order 1
+		+below(570px)
+			height 370px
 	&__slide
 		height 300px
+		object-fit cover
 	&__slider-wrap
 		margin-top 18px
 		overflow hidden
 		width 485px
+		+below(1200px)
+			margin-top 5%
+			margin-bottom 5%
+			width 90%
+			height 90%
 	&__slider-bg
 		position absolute
 		top 0
 		right 0
 		width 485px
 		height 330px
-		background-color yellow
+		background-color _yellow
+		+below(1200px)
+			width 90%
+			height 100%
 	.slick-arrow
 		position absolute
 		top 50%
@@ -44,6 +71,12 @@
 		color transparent
 		background-color transparent
 		border none
+		+below(1200px)
+			top 56%
+		+below(770px)
+			top auto
+			bottom 20px
+			transform translateY(0)!important
 		&:before
 			display block
 			width 27px
@@ -51,6 +84,8 @@
 			content ''
 	.slick-prev
 		transform translateY(-220%)
+		+below(770px)
+			transform translateX(-40px) translateY(0)!important
 		&:before
 			background url(../images/arrow-left.png) center center no-repeat
 	.slick-next
@@ -66,7 +101,11 @@
 		align-items center
 		font-family GMedium
 		font-size 12px
-		color yellow
+		color _yellow
+		+below(1200px)
+			bottom 300px
+		+below(570px)
+			display none
 		&:after
 			position relative
 			z-index 0
@@ -75,7 +114,7 @@
 			width 200px
 			height 1px
 			content ''
-			background-color yellow
+			background-color _yellow
 		strong
 			padding 0 3px
 			font-family Gbold
@@ -86,6 +125,9 @@
 		left 55%
 		size(250px)
 		object-fit contain
+		+below(570px)
+			right 0
+			left auto
 	&__dots2
 		position absolute
 		z-index -1

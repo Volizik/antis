@@ -5,6 +5,9 @@
 	background-color #fff
 	&__wrap
 		display flex
+		+below(992px)
+			flex-direction column
+			align-items center
 	&__form
 		margin-top -25px
 		margin-left 58px
@@ -16,6 +19,15 @@
 		align-items center
 		background-color #fff
 		box-shadow 0 10px 20px #ccc
+		+below(1200px)
+			margin-right 30px
+			margin-left 0
+			width 440px
+		+below(992px)
+			width 100%
+			max-width 500px
+		+below(570px)
+			margin-right 0
 	&__form-title
 		margin-bottom 5px
 		font-family Gbold
@@ -71,6 +83,8 @@
 		margin-top 48px
 		margin-left auto
 		max-width 562px
+		+below(992px)
+			max-width 100%
 	&__title
 		margin-bottom 26px
 		font-family Bebas

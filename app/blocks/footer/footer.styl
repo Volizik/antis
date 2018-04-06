@@ -9,13 +9,20 @@
 	&__wrap
 		display flex
 		align-items flex-start
+		+below(770px)
+			flex-wrap wrap
+			justify-content space-around
 	&__logo
 		width 70px
 		object-fit contain
+		+below(400px)
+			display none
 	&__menu
 		margin-left 24px
 		display flex
 		flex-direction column
+		+below(370px)
+			margin-left 0
 	&__menu-item
 		margin-bottom 8px
 		font-size 15px
@@ -27,6 +34,14 @@
 		display flex
 		flex-wrap wrap
 		max-width 600px
+		+below(1200px)
+			margin-left 40px
+			max-width 500px
+		+below(770px)
+			margin-top 30px
+			order 2
+		+below(370px)
+			margin-left 0
 	&__services-item
 		margin-bottom 5px
 		width 50%
@@ -37,6 +52,8 @@
 		display flex
 		flex-direction column
 		font-size 13px
+		+below(770px)
+			order 1
 	&__contacts-item
 		margin-bottom 15px
 		display flex

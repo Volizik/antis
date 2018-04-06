@@ -5,6 +5,8 @@
   height 536px
   background url(../images/header.png) no-repeat center center
   background-size cover
+  +below(992px)
+    z-index 5
   &__navbar
     display flex
     align-items center
@@ -12,27 +14,53 @@
   &__logo
     margin-right 38px
     margin-left 12px
+    img
+      width 100px
+  &__logo-wrap
+    width 200px
+    path
+      stroke #fff
+      stroke-width 3px
+      fill #fff
+      opacity 1
+      stroke-dasharray 800
+      animation animate 3s cubic-bezier(0, .23, 1, .1)
+    .st0
+      fill #EFA30A
   &__contacts
     margin-right 60px
     margin-left auto
     display flex
     justify-content center
     align-items center
+    +below(1200px)
+      margin-right 0
+      flex-direction column
+    +below(992px)
+      display none
   &__contact
     font-family GSemi
     font-size 16px
     color #fff
     &:not(:last-of-type)
       margin-right 18px
+      +below(1200px)
+        margin-right 0
     img
       margin-right 6px
   &__wrap
     margin 47px auto
     max-width 760px
+    +below(570px)
+      margin-top 30px
   &__title
     font-family Bebas
     font-size 39px
     color #fff
+    +below(992px)
+      text-align center
+    +below(570px)
+      font-size 28px
   &__desc
     margin 22px auto 0
     max-width 740px
@@ -41,10 +69,17 @@
     line-height 21px
     text-align center
     color #fff
+    +below(570px)
+      font-size 14px
+      line-height 18px
   &__form
     margin-top 65px
     display flex
     justify-content space-between
+    +below(770px)
+      margin-top 30px
+      flex-direction column
+      align-items center
   &__input
     padding-left 25px
     width 270px
@@ -55,9 +90,27 @@
     background-color transparent
     border 1px solid #fff
     border-radius 4px
+    +below(770px)
+      margin-bottom 20px
     &::placeholder
       font-family GRegI
       font-size 13px
       color #fff
   &__submit
     button(200px)
+
+@keyframes animate
+  0%
+    opacity 0
+    fill none
+    stroke-dashoffset 800
+  30%
+    opacity 1
+    fill none
+    stroke-dashoffset 800
+  90%
+    fill rgba(255, 255, 255, 0)
+  100%
+    opacity 1
+    fill rgba(255, 255, 255, 1)
+    stroke-dashoffset 0
